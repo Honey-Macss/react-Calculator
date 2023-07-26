@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.mainStyle{
+    /* display: grid; */
+    gap: 4px;
+    grid-template-rows: 10rem 1fr;
+}
+
+.buttonStyle {
+    display: grid;
+    gap: 4px;
+    grid-template-rows: 3fr 2fr;
+}
+
+.equalBoxes {
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.verticalDiv {
+    display: grid;
+    gap: 4px;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.purple {
+    color: #775a8b;
+    background-color: #2f3646;
+    border: 1px solid rgb(80, 75, 75);
+  }
