@@ -1,47 +1,36 @@
 import React from 'react'
 
-const Buttons = () => {
+const Buttons = (prop) => {
+  
   return (
-    <div className=' buttonStyle'>
-       <section className=' bg-cyan-500 equalBoxes'>
-              <div className=' verticalDiv'>
-                <div className="purple">AC</div>
-                <div >7</div>
-                <div >4</div>
-              </div>
-              <div className=' verticalDiv'>
-                <div className="purple">/</div>
-                <div >8</div>
-                <div >5</div>
-              </div>
-              <div className=' verticalDiv'>
-                <div className="purple">X</div>
-                <div >9</div>
-                <div >6</div>
-              </div>
-              <div className=' verticalDiv'>
-                <div >^</div>
-                <div>-</div>
-                <div >+</div>
-              </div>
-        </section>
+    <div className=' grid grid-cols-[3fr_1fr] gap-1'>
+      <section className=' grid grid-rows-[1fr_3.16fr_1fr] gap-1'>
+        <span className=' text-[#775a8b] grid grid-cols-[repeat(3,_1fr)] gap-1'>
+          <button onClick={prop.clearAll} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)]'>AC</button>
+          <button onClick={prop.divide} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)]'>/</button>
+          <button onClick={prop.multiply} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)]'>X</button>
+        </span>
 
-        <section className=' bg-red-700'>
-              {/* <span >
-                <span >
-                  <span >1</span>
-                  <span >2</span>
-                  <span >3</span>
-                </span>
-                <span >
-                  <span >.</span>
-                  <span >0</span>
-                  <span >%</span>
-                </span>
-              </span>
+        <span className=' text-white grid grid-cols-[repeat(3,_1fr)] gap-1'>
+          {prop.mapped}
+        </span>
 
-              <span class="mainspan2">=</span> */}
-        </section>
+        <span className=' text-white grid grid-cols-[repeat(3,_1fr)] gap-1'>
+          <button onClick={prop.dot} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)] rounded-bl-[10px]'>.</button>
+          <button onClick={prop.zero} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)]'>0</button>
+          <button onClick={prop.doubleZero} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)]'>00</button>
+          </span>
+      </section>
+
+      <section className=' grid grid-rows-[3fr_2fr] gap-1'>
+        <span className=' text-white grid grid-rows-[repeat(3,_1fr] gap-1'>
+          <button onClick={prop.del} className=' bg-[#c45bde]'>DEL</button>
+          <button onClick={prop.minus} className=' bg-[#c45bde]'>-</button>
+          <button onClick={prop.plus} className=' bg-[#c45bde]'>+</button>
+        </span>
+        <button onClick={prop.calc} className=' bg-[#c45bde] text-white rounded-br-[10px]'>=</button>
+      </section>
+       
     </div>
   )
 }
