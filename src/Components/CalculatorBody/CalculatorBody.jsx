@@ -5,12 +5,14 @@ import { useState } from 'react'
 
 const CalculatorBody = () => {
   const numbers = [7,8,9,4,5,6,1,2,3];
+  // mapping out numbers on the screen with the help of the map method
   const mappedNumbers = numbers.map((number) => {
     return <button onClick={() => handleClick(number.toString())} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)]'>{number}</button>
   })
   
   const [value, setValue] = useState("");
 
+  // function that displays what to be calculated once buttons are clicked
   const handleClick = (e) => {
     const ops = ["/", "*", "-", "+", "."]
     if (
@@ -28,6 +30,7 @@ const CalculatorBody = () => {
     // }
   }
 
+  // function to handle calculation
   const calculate = () => {
     try {
       setValue(eval(value))
