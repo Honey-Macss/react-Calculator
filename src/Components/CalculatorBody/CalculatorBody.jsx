@@ -4,10 +4,10 @@ import Buttons from './Buttons'
 import { useState } from 'react'
 
 const CalculatorBody = () => {
-  const numbers = [7,8,9,4,5,6,1,2,3];
+  const numbers = [7,8,9,4,5,6,1,2,3,".", 0, "00"];
   // mapping out numbers on the screen with the help of the map method
-  const mappedNumbers = numbers.map((number) => {
-    return <button onClick={() => handleClick(number.toString())} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)]'>{number}</button>
+  const mappedNumbers = numbers.map((number, index) => {
+    return <button onClick={() => handleClick(number.toString())} className={` bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)] ${index === 9 && "rounded-bl-[10px]"}`}>{number}</button>
   })
   
   const [value, setValue] = useState("");
