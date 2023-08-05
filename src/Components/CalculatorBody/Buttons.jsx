@@ -10,16 +10,10 @@ const Buttons = (prop) => {
           <button onClick={prop.divide} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)]'>/</button>
           <button onClick={prop.multiply} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)]'>X</button>
         </span>
-        {/* 1fr_3.16fr_1fr */}
+        
         <span className=' text-white grid grid-cols-[repeat(3,_1fr)] gap-1'>
           {prop.mapped}
         </span>
-
-        {/* <span className=' text-white grid grid-cols-[repeat(3,_1fr)] gap-1'>
-          <button onClick={prop.dot} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)] rounded-bl-[10px]'>.</button>
-          <button onClick={prop.zero} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)]'>0</button>
-          <button onClick={prop.doubleZero} className=' bg-[#2f3646] border border-solid border-[rgb(80,_75,_75)]'>00</button>
-          </span> */}
       </section>
 
       <section className=' grid grid-rows-[3fr_2fr] gap-1'>
